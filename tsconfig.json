@@ -6,6 +6,16 @@
       "dom.iterable",
       "esnext"
     ],
+    "paths": {
+      "appPath": [
+        "./src"
+      ],
+      "appSrc": [
+        "./src"
+      ]
+    },
+    "baseUrl": ".",
+    "rootDir": ".",
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
