@@ -1,17 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import { Provider } from 'react-redux';
-import { store } from 'src/store/store';
+import AppRouter from './routes/Routes';
+import './i18n';
+import { store } from './store/store';
+import { ThemeProvider } from '@mui/material';
+import { materialTheme } from './theme.material';
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
 root.render(
   <Provider store={store}>
-    <React.StrictMode>
-      <App/>
-    </React.StrictMode>
+    <ThemeProvider theme={materialTheme}>
+      <AppRouter/>
+    </ThemeProvider>
   </Provider>
 );

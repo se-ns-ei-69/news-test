@@ -7,14 +7,8 @@
       "esnext"
     ],
     "paths": {
-      "appPath": [
-        "./src"
-      ],
-      "appSrc": [
-        "./src"
-      ]
     },
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "rootDir": ".",
     "allowJs": true,
     "skipLibCheck": true,

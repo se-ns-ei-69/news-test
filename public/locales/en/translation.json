@@ -1,0 +1,30 @@
+{
+  "title": "Welcome",
+  "errors": {
+    "authError": "Username or password are incorrect."
+  },
+  "messages": {
+    "emptyList": "There seems to be nothing here",
+    "loading": "Loading..."
+  },
+  "buttons": {
+    "login": "Login",
+    "logout": "Logout",
+    "delete": "Delete",
+    "loadMore": "Read more"
+  },
+  "pages": {
+    "profile": "PROFILE",
+    "news": "NEWS",
+    "home": "HOME"
+  },
+  "modals": {
+    "logout": {
+      "description": "Are you sure you want to log out?",
+      "buttons": {
+        "agree": "Log out",
+        "disagree": "Cancel"
+      }
+    }
+  }
+}
