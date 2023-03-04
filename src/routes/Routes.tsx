@@ -2,7 +2,7 @@ import React from 'react';
 import {
   Routes,
   Route,
-  HashRouter
+  BrowserRouter
 } from 'react-router-dom';
 import App from '../App';
 import SignIn from '../pages/SignIn';
@@ -15,7 +15,7 @@ import { useAppSelector } from '../store/store';
 const AppRouter = () => {
   const isAuth = useAppSelector((state) => state.user.isAuth);
   return (
-    <HashRouter>
+    <BrowserRouter basename={window.location.pathname || ''}>
       <Routes>
         <Route element={<App/>}>
           <Route path="/" element={<Home/>}/>
@@ -31,7 +31,7 @@ const AppRouter = () => {
           <Route path="*" element={<div>NOT FOUND</div>}/>
         </Route>
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   );
 };
 
