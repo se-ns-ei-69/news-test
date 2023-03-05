@@ -7,7 +7,11 @@ i18n
   .use(initReactI18next)
   .init({
     fallbackLng: 'en',
-    debug: false
+    debug: false,
+    backend: {
+      //                 ⬇️
+      loadPath: '/news-test/locales/{{lng}}/{{ns}}.json'
+    }
   });
 
 
