@@ -10,11 +10,12 @@ import { useLocation, useNavigate } from 'react-router-dom';
 const Menu = () => {
   const location = useLocation();
   const [selectedPath, setSelectedPath] = useState<string>(location.pathname);
-  console.log('render');
 
   const navigate = useNavigate();
 
-  const handleListItemClick = (path: string) => navigate(path);
+  const handleListItemClick = (path: string) => {
+    navigate(path, { replace: true });
+  };
 
   useEffect(() => {
     setSelectedPath(location.pathname);
