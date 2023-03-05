@@ -15,7 +15,7 @@ import { useAppSelector } from '../store/store';
 const AppRouter = () => {
   const isAuth = useAppSelector((state) => state.user.isAuth);
   return (
-    <HashRouter basename={window.location.pathname || ''}>
+    <HashRouter>
       <Routes>
         <Route element={<App/>}>
           <Route path="/" element={<Home/>}/>

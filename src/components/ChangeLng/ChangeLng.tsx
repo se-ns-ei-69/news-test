@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ToggleButtonGroup, ToggleButton } from '@mui/material';
 import { useAppDispatch, useAppSelector } from '../../store/store';
@@ -12,8 +12,16 @@ const ChangeLng = () => {
   );
 
   const changeLanguage = useCallback((lng: string) => {
-    i18n.changeLanguage(lng).then(() => dispatch(setLanguage(lng)));
+    if (i18n.language !== lng) {
+      i18n.changeLanguage(lng).then(() => dispatch(setLanguage(lng)));
+    }
   }, []);
+
+  useEffect(() => {
+    if (i18n.language !== selectedLanguage) {
+      changeLanguage(selectedLanguage);
+    }
+  }, [selectedLanguage]);
 
   return (
     <ToggleButtonGroup
