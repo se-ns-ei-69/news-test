@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# News tesp app
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+github pages link: [https://se-ns-ei-69.github.io/news-test/](https://se-ns-ei-69.github.io/news-test/)
 
 ## Available Scripts
 
