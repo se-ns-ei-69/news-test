@@ -1,8 +1,8 @@
 # News test app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## github pages link: [https://se-ns-ei-69.github.io/news-test/](https://se-ns-ei-69.github.io/news-test/)
 
-github pages link: [https://se-ns-ei-69.github.io/news-test/](https://se-ns-ei-69.github.io/news-test/)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
