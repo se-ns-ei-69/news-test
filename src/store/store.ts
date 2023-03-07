@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { newsSlice } from './slices/news/newsSlice';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
-import { userInfoSlice } from './slices/auth/authSlice';
+import { authSlice } from './slices/auth/authSlice';
 import { mainSlice } from './slices/main/mainSlice';
 import {
   FLUSH,
@@ -29,13 +29,13 @@ const mainPersistConfig = {
 
 const persistedMainReducer =
   persistReducer(mainPersistConfig, mainSlice.reducer);
-const persistedUserReducer =
-  persistReducer(persistConfig, userInfoSlice.reducer);
+const persistedAuthReducer =
+  persistReducer(persistConfig, authSlice.reducer);
 
 export const store = configureStore({
   reducer: {
     [newsSlice.name]: newsSlice.reducer,
-    [userInfoSlice.name]: persistedUserReducer,
+    [authSlice.name]: persistedAuthReducer,
     [mainSlice.name]: persistedMainReducer
   },
   middleware: (getDefaultMiddleware) =>
