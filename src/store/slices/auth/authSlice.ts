@@ -21,6 +21,6 @@ export const authSlice = createSlice({
   }
 });
 
-const { actions } = userInfoSlice;
+const { actions } = authSlice;
 
 export const { login, logout } = actions;
